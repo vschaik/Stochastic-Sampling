@@ -4,7 +4,7 @@ This repository contains my iPython Notebook on Stochastic Sampling, also known 
 
 # Requirements
 
-ipython (to install: pip install "ipython[notebook]" )
+jupyter (to install: pip install jupyter )
 
 pymc    (to install: pip install pymc )
 
@@ -18,7 +18,7 @@ matplotlib
 
 From the Stochastic-Sampling directory:
 
-  ipython notebook Stochastic_Sampling_Notebook.ipynb 
+  jupyter notebook Stochastic_Sampling_Notebook.ipynb 
   
 Point your browser at http://localhost:8888/
 
