@@ -18,7 +18,7 @@ matplotlib
 
 From the Stochastic-Sampling directory:
 
-  jupyter notebook Stochastic_Sampling_Notebook.ipynb 
+  jupyter notebook Stochastic_Sampling.ipynb 
   
 Point your browser at http://localhost:8888/
 
