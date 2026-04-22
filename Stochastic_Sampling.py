@@ -9,7 +9,7 @@ from dataclasses import dataclass
 
 import matplotlib
 import numpy as np
-from IPython.display import clear_output, display
+from IPython.display import display
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Rectangle
 from matplotlib.pyplot import *
@@ -32,8 +32,12 @@ def render_figure(fig, *, close_figure=True):
 
 def animated_frame(fig, pause=1.5):
     """Display an animation frame in-place and optionally sleep."""
-    clear_output(wait=True)
-    display(fig)
+    display_handle = getattr(fig, "_stochastic_sampling_display_handle", None)
+    if display_handle is None:
+        display_handle = display(fig, display_id=True)
+        setattr(fig, "_stochastic_sampling_display_handle", display_handle)
+    else:
+        display_handle.update(fig)
     if pause:
         time.sleep(pause)
 
